@@ -7,7 +7,7 @@ if False:
 	url_page = st_javascript("await fetch('').then(r => window.parent.location.href)",key=str(x))
 	x+=1
 	if url_page!=0:
-		break
+		pass#break
 	else:
 		st.write(url_page)
 		time.sleep(1)
