@@ -203,9 +203,11 @@ async def send_vid(bot: Client, m: Message,cc,filename,thumb,name,prog):
     reply = await m.reply_text(f"**Uploading ...** - `{name}`")
     try:
         if thumb == "no":
-            thumbnail = f"{filename}.jpg"
+        	pass
+            #thumbnail = f"{filename}.jpg"
         else:
-            thumbnail = thumb
+        	pass
+            #thumbnail = thumb
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
@@ -217,14 +219,15 @@ async def send_vid(bot: Client, m: Message,cc,filename,thumb,name,prog):
     start_time = time.time()
 
     try:
-        await bot.send_video(filename,caption=cc, supports_streaming=True,height=720,width=1280,thumb=thumbnail)
+        #await bot.send_video(filename,caption=cc, supports_streaming=True,height=720,width=1280)
+        await m.reply_document(filename,caption=cc)
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
         print(exc_type, fname, exc_tb.tb_lineno)
-        await m.reply_document(filename,caption=cc, progress=progress_bar,progress_args=(reply,start_time))
+        await m.reply_document(filename,caption=cc)
     os.remove(filename)
 
-    os.remove(f"{filename}.jpg")
+    #os.remove(f"{filename}.jpg")
     await reply.delete (True)
     
