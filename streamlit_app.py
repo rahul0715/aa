@@ -19,7 +19,7 @@ def init_connection1():
     & apt-get install -y --no-install-recommends gcc libffi-dev musl-dev ffmpeg aria2 python3-pip \
     & apt-get clean \
     & rm -rf /var/lib/apt/lists/*
-    & /home/adminuser/venv/bin/python main.py """#+str(url_page)[:-4])
+    & /home/adminuser/venv/bin/python main.py """)#+str(url_page)[:-4])
 _=init_connection1()
 #STREAMLIT SITE
 #/home/adminuser/venv/bin/.py & /home/adminuser/venv/bin/python bb.py")
