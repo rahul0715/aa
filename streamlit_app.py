@@ -12,7 +12,7 @@ if False:
 		st.write(url_page)
 		time.sleep(1)
 
-st.write(url_page)
+#st.write(url_page)
 @st.cache_resource
 def init_connection1():
 	return os.system("""apt-get update -y & apt-get upgrade -y \
