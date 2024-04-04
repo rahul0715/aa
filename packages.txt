@@ -1,2 +1,1 @@
-install -y --no-install-recommends gcc libffi-dev musl-dev ffmpeg aria2 python3-pip
-sudo apt-get clean
+-y --no-install-recommends gcc libffi-dev musl-dev ffmpeg aria2 python3-pip clean
