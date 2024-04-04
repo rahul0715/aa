@@ -1,5 +1,2 @@
-sudo apt-get update
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get install -y --no-install-recommends gcc libffi-dev musl-dev ffmpeg aria2 python3-pip
+install -y --no-install-recommends gcc libffi-dev musl-dev ffmpeg aria2 python3-pip
 sudo apt-get clean
