@@ -220,7 +220,7 @@ async def account_login(bot: Client, m: Message):
             
                 print(exc_type, fname, exc_tb.tb_lineno)
                 await m.reply_text(
-                    f"**downloading failed 🚫**\n{str(e)}\n**Name** - {name}"
+                    f"**downloading failed 🚫**\n{str(e)}\n**Name** - {name}\n\n**URL** - {url}"
                 )
                 continue
 
