@@ -26,3 +26,4 @@ apscheduler
 streamlit_javascript
 pymongo
 git+https://github.com/rthalley/dnspython
+git+https://github.com/benoitc/gunicorn.git
