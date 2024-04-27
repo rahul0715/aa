@@ -118,7 +118,7 @@ class TgHandler:
     @staticmethod
     def resolution_(resolution: str):
         if resolution not in ['144', '180', '240', '360', '480', '720', '1080']:
-            quality = '360'
+            quality = '1080'
         else:
             quality = resolution
         return quality
