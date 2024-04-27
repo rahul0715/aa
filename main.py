@@ -18,7 +18,7 @@ class Config(object):
     DOWNLOAD_LOCATION = "./DOWNLOADS"
     SESSIONS = "./SESSIONS"
 
-    AUTH_USERS = os.environ.get('SUDO_USERS', '1183124209,5665231556').split(',')
+    AUTH_USERS = os.environ.get('SUDO_USERS', '1183124209,5665231556').split(' ')
     for i in range(len(AUTH_USERS)):
         AUTH_USERS[i] = int(AUTH_USERS[i])
 
