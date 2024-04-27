@@ -176,7 +176,7 @@ class TgClient(TgHandler):
 
             msg4 = await self.bot.send_message(
                 self.m.chat.id,
-                text="**Send Quality (Default is 360) :-**"
+                text="**Send Quality ('144', '180', '240', '360', '480', '720', '1080' )\n\n(Default is 1080) :-**"
             )
             user_quality = await self.bot.listen(self.m.chat.id)
             resolution = user_quality.text
