@@ -346,7 +346,7 @@ class download_handler(Download_Methods):
         if self.url.startswith("https://webvideos.classplusapp.com/"):
             ytf=f"b[height<={self.Q}]/bv[height<={self.Q}]+ba/b/bv+ba"
             cmd = f'yt-dlp --add-header "referer:https://web.classplusapp.com/" --add-header "x-cdn-tag:empty" -f "{ytf}" "{self.url}" -o "{self.temp_dir}.%(ext)s"'
-            file_name = download_handler.(self, cmd=cmd)
+            file_name = download_handler.recursive(self, cmd=cmd)
             return file_name
 
         else:
