@@ -344,9 +344,10 @@ class download_handler(Download_Methods):
             return file_name
             
         if self.url.startswith("https://webvideos.classplusapp.com/"):
-            ytf=f"b[height<={self.Q}]/bv[height<={self.Q}]+ba/b/bv+ba"
-            cmd = f'yt-dlp --add-header "referer:https://web.classplusapp.com/" --add-header "x-cdn-tag:empty" -f "{ytf}" "{self.url}" -o "{self.temp_dir}.%(ext)s"'
-            file_name = download_handler.recursive(self, cmd=cmd)
+            YTF = f"bv[height<=?{self.Q}]+ba/[height<=?{self.Q}]+ba/[height>=?{self.Q}]+ba/[height<=?{self.Q}]/[height>=?{self.Q}]/b"
+            YTDLP = f'yt-dlp --add-header "referer:https://web.classplusapp.com/" --add-header "x-cdn-tag:empty" -f "{YTF}" --no-warning "{self.url}" --merge-output-format mp4 --remux-video mp4 -o "{self.temp_dir}.%(ext)s"'
+            CMD = f"{YTDLP} -R 25 --fragment-retries 25 --external-downloader aria2c --downloader-args 'aria2c: -x 16 -j 32'"
+            file_name = download_handler.recursive(self, cmd=CMD)
             return file_name
 
         else:
