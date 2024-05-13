@@ -345,7 +345,8 @@ class download_handler(Download_Methods):
             
         if self.url.startswith("https://webvideos.classplusapp.com/"):
             YTF = f"bv[height<=?{self.Q}]+ba/[height<=?{self.Q}]+ba/[height>=?{self.Q}]+ba/[height<=?{self.Q}]/[height>=?{self.Q}]/b"
-            header=f"""--add-header 'User-Agent:Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36' --add-header 'authority:webvideos.classplusapp.com' --add-header 'accept-language:en-GB,en-US;q=0.9,en;q=0.8' --add-header 'origin:https://web.classplusapp.com' --add-header 'referer:https://web.classplusapp.com/' --add-header 'sec-ch-ua:"Not-A.Brand";v="99", "Chromium";v="124"' --add-header 'sec-ch-ua-mobile:?0' --add-header 'sec-ch-ua-platform:"Linux"' --add-header 'sec-fetch-dest:empty' --add-header 'sec-fetch-mode:cors' --add-header 'sec-fetch-site:same-site' --add-header 'x-cdn-tag:empty'"""
+            
+            header=f"""--add-header 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36' --add-header 'x-cdn-tag: empty'"""
             YTDLP = f'yt-dlp {header} -f "{YTF}" --no-warning "{self.url}" --merge-output-format mp4 --remux-video mp4 -o "{self.temp_dir}.%(ext)s"'
             CMD = f"{YTDLP} -R 25 --fragment-retries 25 --external-downloader aria2c --downloader-args 'aria2c: -x 16 -j 32'"
             file_name = download_handler.recursive(self, cmd=CMD)
