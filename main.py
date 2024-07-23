@@ -12,21 +12,21 @@ from tglogging import TelegramLogHandler
 
 # Config 
 class Config(object):
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6998421847:AAFG-j7vvXsHtue3O3yawWlbbncA0zi_s5k")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6611654088:AAE_ACVRTLoucGh_YpnJcuqauyRI3c1cHbw")
     API_ID = int(os.environ.get("API_ID",  20319884))
     API_HASH = os.environ.get("API_HASH", "637e3ba6357aa3ba2f3bf5742e0fd066")
     DOWNLOAD_LOCATION = "./DOWNLOADS"
     SESSIONS = "./SESSIONS"
 
-    AUTH_USERS = os.environ.get('SUDO_USERS', '1183124209,5665231556').split(' ')
+    AUTH_USERS = os.environ.get('SUDO_USERS', '5881684718,5665231556').split(' ')
     for i in range(len(AUTH_USERS)):
         AUTH_USERS[i] = int(AUTH_USERS[i])
 
-    GROUPS = os.environ.get('SUDO_GROUPS', '-1002024450668').split(' ')
+    GROUPS = os.environ.get('SUDO_GROUPS', '-1002207321653').split(' ')
     for i in range(len(GROUPS)):
         GROUPS[i] = int(GROUPS[i])
 
-    LOG_CH =-1002024450668
+    LOG_CH =-1002182529805
 
 # TelegramLogHandler is a custom handler which is inherited from an existing handler. ie, StreamHandler.
 logging.basicConfig(
@@ -50,7 +50,7 @@ LOGGER.info("live log streaming to telegram.")
 
 # Store
 class Store(object):
-    CPTOKEN = "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgzNjkyMTIsIm9yZ0lkIjoyNjA1LCJ0eXBlIjoxLCJtb2JpbGUiOiI5MTcwODI3NzQyODkiLCJuYW1lIjoiQWNlIiwiZW1haWwiOm51bGwsImlzRmlyc3RMb2dpbiI6dHJ1ZSwiZGVmYXVsdExhbmd1YWdlIjpudWxsLCJjb3VudHJ5Q29kZSI6IklOIiwiaXNJbnRlcm5hdGlvbmFsIjowLCJpYXQiOjE2NDMyODE4NzcsImV4cCI6MTY0Mzg4NjY3N30.hM33P2ai6ivdzxPPfm01LAd4JWv-vnrSxGXqvCirCSpUfhhofpeqyeHPxtstXwe0"
+    CPTOKEN = "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MTI0NDYzNDQyLCJvcmdJZCI6NzExNTI4LCJ0eXBlIjoxLCJtb2JpbGUiOiI5MTkwNTA2MzE0NzciLCJuYW1lIjoiTWFoZW5kcmFrdW1hcjA5NDExIiwiZW1haWwiOm51bGwsImlzSW50ZXJuYXRpb25hbCI6MCwiZGVmYXVsdExhbmd1YWdlIjoiRU4iLCJjb3VudHJ5Q29kZSI6IklOIiwiY291bnRyeUlTTyI6IjkxIiwidGltZXpvbmUiOiJHTVQrNTozMCIsImlzRGl5IjpmYWxzZSwib3JnQ29kZSI6InVqYWxhZiIsImlzRGl5U3ViYWRtaW4iOjAsImZpbmdlcnByaW50SWQiOiI2NGY4ZDA5NjQzY2FlYjcxNTg2NzA0MTNlNGRhYWM5YiIsImlhdCI6MTcyMTc0MDgwMiwiZXhwIjoxNzIyMzQ1NjAyfQ.iSRxHk8EE_tEibbkUrGDXoFucd9ksKL8IZwYNuEMtyYTs1fpOz7et2dYlTDdeU0C"
     SPROUT_URL = "https://discuss.oliveboard.in/"
     ADDA_TOKEN = ""
     THUMB_URL = "https://telegra.ph/file/fd7a1e0e94a1f3e7d8b3a.jpg"
